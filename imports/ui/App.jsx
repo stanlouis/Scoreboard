@@ -1,7 +1,7 @@
 import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 
-import { Players } from './../api/players';
+import { Players, calculatePlayerPositions } from './../api/players';
 import AddPlayer from './AddPlayer';
 import PlayerList from './PlayerList';
 import TitleBar from './TitleBar';
@@ -55,7 +55,9 @@ const App = props => {
 };
 
 export default withTracker(() => {
+  let players = Players.find({}, { sort: { score: -1 } }).fetch();
+  let positionedPlayers = calculatePlayerPositions(players);
   return {
-    players: Players.find({}, { sort: { score: -1 } }).fetch(),
+    players: positionedPlayers,
   };
 })(App);

@@ -1,13 +1,15 @@
 import React from 'react';
 
 const Player = props => {
-  const { name, score, _id } = props.playerData;
+  const { name, score, _id, position, rank } = props.playerData;
   return (
     <div className="item">
       <div className="player">
         <div>
           <h3 className="player__name">{name}</h3>
-          <p className="player__stats">{score} point(s).</p>
+          <p className="player__stats">
+            {rank} {position} {score} point(s).
+          </p>
         </div>
         <div className="player__actions">
           <button

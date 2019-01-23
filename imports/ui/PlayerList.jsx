@@ -2,7 +2,12 @@ import React from 'react';
 import Player from './Player';
 
 const PlayerList = props => {
-  const { playersList, handleDelete, handleIncrement, handleDecrement } = props;
+  const {
+    playersList,
+    handleDelete,
+    handleIncrement,
+    handleDecrement,
+  } = props;
 
   return playersList.length === 0 ? (
     <div className="item">
