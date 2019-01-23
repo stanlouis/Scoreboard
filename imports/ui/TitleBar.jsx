@@ -1,11 +1,13 @@
-import React from 'react'
+import React from 'react';
 
-const TitleBar = ({title}) => {
+const TitleBar = ({ title }) => {
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="title-bar">
+      <div className="wrapper">
+        <h1>{title}</h1>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default TitleBar
+export default TitleBar;

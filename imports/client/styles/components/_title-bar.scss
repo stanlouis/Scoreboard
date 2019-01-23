@@ -1,0 +1,15 @@
+.title-bar {
+  background-color: rgba(248, 80, 50, 1);
+  background: filter-gradient(#f85032, #e35557, horizontal);
+  background: background-image(
+    linear-gradient(
+      left,
+      rgba(248, 80, 50, 1) 0%,
+      rgba(241, 111, 92, 1) 50%,
+      rgba(246, 41, 12, 1) 51%,
+      rgba(240, 47, 23, 1) 71%,
+      rgba(227, 85, 87, 1) 100%
+    )
+  );
+  color: #ffffff;
+}
