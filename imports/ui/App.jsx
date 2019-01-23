@@ -3,6 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 
 import { Players } from './../api/players';
 import AddPlayer from './AddPlayer';
+import PlayerList from './PlayerList';
 import TitleBar from './TitleBar';
 
 const renderPlayers = playersList => {
@@ -39,7 +40,12 @@ const App = props => {
   return (
     <div>
       <TitleBar title={title} />
-      {renderPlayers(props.players)}
+      <PlayerList
+        playersList={props.players}
+        handleIncrement={this.handleIncrement}
+        handleDecrement={this.handleDecrement}
+        handleDelete={this.handleDelete}
+      />
       <AddPlayer handleSubmit={this.handleSubmit} />
     </div>
   );
