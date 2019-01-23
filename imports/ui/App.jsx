@@ -3,6 +3,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 
 import { Players } from './../api/players';
 import AddPlayer from './AddPlayer';
+import TitleBar from './TitleBar';
 
 const renderPlayers = playersList => {
   return playersList.map(function(player) {
@@ -37,7 +38,7 @@ const App = props => {
   let title = 'Score Keep';
   return (
     <div>
-      <h1>{title}</h1>
+      <TitleBar title={title} />
       {renderPlayers(props.players)}
       <AddPlayer handleSubmit={this.handleSubmit} />
     </div>
