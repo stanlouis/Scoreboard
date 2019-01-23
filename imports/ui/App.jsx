@@ -53,6 +53,6 @@ const App = props => {
 
 export default withTracker(() => {
   return {
-    players: Players.find().fetch(),
+    players: Players.find({}, { sort: { score: -1 } }).fetch(),
   };
 })(App);
