@@ -4,27 +4,32 @@ const Player = props => {
   const { name, score, _id } = props.playerData;
   return (
     <div className="item">
-      <p>
-        {name} has {score} point(s).
-      </p>
-      <button
-        className="button button--round"
-        onClick={() => handleIncrement(_id)}
-      >
-        +1
-      </button>
-      <button
-        className="button button--round"
-        onClick={() => handleDecrement(_id)}
-      >
-        -1
-      </button>
-      <button
-        className="button button--round"
-        onClick={() => handleDelete(_id)}
-      >
-        X
-      </button>
+      <div className="player">
+        <div>
+          <h3 className="player__name">{name}</h3>
+          <p className="player__stats">{score} point(s).</p>
+        </div>
+        <div className="player__actions">
+          <button
+            className="button button--round"
+            onClick={() => handleIncrement(_id)}
+          >
+            +1
+          </button>
+          <button
+            className="button button--round"
+            onClick={() => handleDecrement(_id)}
+          >
+            -1
+          </button>
+          <button
+            className="button button--round"
+            onClick={() => handleDelete(_id)}
+          >
+            X
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
