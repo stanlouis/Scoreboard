@@ -2,6 +2,7 @@ import React from 'react';
 import { withTracker } from 'meteor/react-meteor-data';
 
 import { Players } from './../api/players';
+import AddPlayer from './AddPlayer';
 
 const renderPlayers = playersList => {
   return playersList.map(function(player) {
@@ -38,10 +39,7 @@ const App = props => {
     <div>
       <h1>{title}</h1>
       {renderPlayers(props.players)}
-      <form onSubmit={this.handleSubmit}>
-        <input type="text" name="playerName" placeholder="Player name" />
-        <button>Add Player</button>
-      </form>
+      <AddPlayer handleSubmit={this.handleSubmit} />
     </div>
   );
 };
