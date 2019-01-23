@@ -5,7 +5,9 @@ const PlayerList = props => {
   const { playersList, handleDelete, handleIncrement, handleDecrement } = props;
 
   return playersList.length === 0 ? (
-    <p>Add first player to start.</p>
+    <div className="item">
+      <p className="item__message">Add first player to start.</p>
+    </div>
   ) : (
     playersList.map(player => {
       return (

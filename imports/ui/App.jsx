@@ -36,17 +36,20 @@ handleSubmit = e => {
 };
 
 const App = props => {
-  let title = 'Score Keep';
+  const title = 'Score Keep';
+  const subtitle = 'Created by Stanley Louis';
   return (
     <div>
-      <TitleBar title={title} />
-      <PlayerList
-        playersList={props.players}
-        handleIncrement={this.handleIncrement}
-        handleDecrement={this.handleDecrement}
-        handleDelete={this.handleDelete}
-      />
-      <AddPlayer handleSubmit={this.handleSubmit} />
+      <TitleBar title={title} subtitle={subtitle} />
+      <div className="wrapper">
+        <PlayerList
+          playersList={props.players}
+          handleIncrement={this.handleIncrement}
+          handleDecrement={this.handleDecrement}
+          handleDelete={this.handleDelete}
+        />
+        <AddPlayer handleSubmit={this.handleSubmit} />
+      </div>
     </div>
   );
 };

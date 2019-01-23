@@ -3,13 +3,28 @@ import React from 'react';
 const Player = props => {
   const { name, score, _id } = props.playerData;
   return (
-    <div>
+    <div className="item">
       <p>
         {name} has {score} point(s).
-        <button onClick={() => handleIncrement(_id)}>+1</button>
-        <button onClick={() => handleDecrement(_id)}>-1</button>
-        <button onClick={() => handleDelete(_id)}>X</button>
       </p>
+      <button
+        className="button button--round"
+        onClick={() => handleIncrement(_id)}
+      >
+        +1
+      </button>
+      <button
+        className="button button--round"
+        onClick={() => handleDecrement(_id)}
+      >
+        -1
+      </button>
+      <button
+        className="button button--round"
+        onClick={() => handleDelete(_id)}
+      >
+        X
+      </button>
     </div>
   );
 };
